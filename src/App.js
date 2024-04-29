@@ -1,7 +1,9 @@
 import {Component} from 'react'
 import HistoryProfile from './components/HistoryProfile'
 
+
 import './App.css'
+
 
 const initialHistoryList = [
   {
@@ -47,6 +49,7 @@ const initialHistoryList = [
     domainUrl: 'github.com',
   },
 
+
   {
     id: 6,
     timeAccessed: '02:45 PM',
@@ -61,6 +64,7 @@ const initialHistoryList = [
     title: 'Stack Overflow - Where Developers Learn, Share, & Build Careers',
     domainUrl: 'stackoverflow.com',
   },
+
 
   {
     id: 8,
@@ -83,11 +87,13 @@ class App extends Component {
     userDetailsList: initialHistoryList,
   }
 
+
   onChangeSearchInput = event => {
     this.setState({
       searchInput: event.target.value,
     })
   }
+
 
   onDeleteUser = id => {
     const {userDetailsList} = this.state
@@ -96,6 +102,7 @@ class App extends Component {
     )
     this.setState({userDetailsList: filteredUserData})
   }
+
 
   render() {
     const {searchInput, userDetailsList} = this.state
@@ -137,5 +144,6 @@ class App extends Component {
     )
   }
 }
+
 
 export default App
